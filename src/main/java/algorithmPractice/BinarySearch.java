@@ -7,7 +7,7 @@ public class BinarySearch {
         int target = 6;
         int index = binarySearch(arr, target);
         System.out.println("while："  + (index == -1 ? "没找到" : "index: " + index));
-        int index2 = binarySearchRecursion(arr, 0, arr.length-1, target);
+        int index2 = binarySearchRecursion(arr, 0, arr.length, target);
         System.out.println("递归："  + (index2 == -1 ? "没找到" : "index: " + index2));
     }
 
@@ -33,7 +33,7 @@ public class BinarySearch {
     }
 
     private static int binarySearchRecursion(int[] arr, int start, int end, int target) {
-        int middleIndex = (end + 1 + start)/2;
+        int middleIndex = (end + start)/2;
         int middleNum = arr[middleIndex];
         if (middleNum == target) {
             return middleIndex;
